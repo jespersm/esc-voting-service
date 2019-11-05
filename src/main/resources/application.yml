@@ -1,0 +1,16 @@
+---
+micronaut:
+  server:
+    port: 8088
+  application:
+    name: esc-voting-service
+  router:
+      static-resources:
+          default:
+              enabled: true   
+              mapping: "/**"  
+              paths: "classpath:client"
+  io:
+    watch:
+      paths: src/main
+      restart: true

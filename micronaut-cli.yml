@@ -1,0 +1,5 @@
+profile: kafka
+defaultPackage: esc.voting.service
+---
+testFramework: junit
+sourceLanguage: java

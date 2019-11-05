@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    Last vote: <span id="songNumber"></span>
+    (voter: <span id="voterName"></span>, addr: <span id="clientIpAddress"></span>).
+<script>
+    var evtSource = new EventSource("/vote/votes");
+    evtSource.onmessage = function(event) {
+        const song = JSON.parse(event.data);
+        document.getElementById('songNumber').innerText = song.songNumber;
+        document.getElementById('voterName').innerText = song.voterName;
+        document.getElementById('clientIpAddress').innerText = song.clientIpAddress;
+    }
+</script>
+</body>
+</html>
