@@ -6,4 +6,4 @@ As presented at DEVOXX Belgium 2019
 
 Start it with `./gradlew run'
 
-Then visit <http://localhost:8080/index.html>
+Then visit <http://localhost:8088/index.html>
